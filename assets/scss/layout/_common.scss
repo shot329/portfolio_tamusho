@@ -40,8 +40,10 @@ section {
   }
 }
 h1.site-title {
+  width: 21rem;
   font-size: 24px;
   @include mq() {
+    width: auto;
     margin-top: -2px;
   }
   @include mq(md) {

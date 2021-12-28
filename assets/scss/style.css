@@ -102,11 +102,13 @@ section {
 }
 
 h1.site-title {
+  width: 21rem;
   font-size: 24px;
 }
 
 @media screen and (min-width: 768px) {
   h1.site-title {
+    width: auto;
     margin-top: -2px;
   }
 }
