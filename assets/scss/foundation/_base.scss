@@ -1,0 +1,32 @@
+// COLORS
+// @inlcude cl(black);
+//--------------------------------------------------
+$colors: (
+  white: #fff,
+  black: #000,
+  grey:#787878,
+  grey02:#D3D3D3,
+  red:#B60200,
+  red02:#FFCDCD,
+);
+@function cl($key) {
+	@return map-get($colors, $key);
+}
+// $breakpoints
+$breakpoints: (
+  'xxs': 'screen and (min-width: 375px)',
+  'xs': 'screen and (min-width: 480px)',
+  'sm': 'screen and (min-width: 768px)',
+  'md': 'screen and (min-width: 1024px)',
+  'lg': 'screen and (min-width: 1200px)',
+) !default;
+// mediaquery
+@mixin mq($breakpoint: sm) {
+	@media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	}
+}
+// vw
+@function vw($width, $px) {
+	@return $px / $width * 100vw;
+}

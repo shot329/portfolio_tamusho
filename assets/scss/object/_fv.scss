@@ -1,0 +1,167 @@
+#fv {
+  @include mq(md) {
+    display: flex;
+  }
+  .fv-content {
+    display: none;
+    @include mq(md) {
+      display: block;
+      width: 30%;
+    }
+    .fv-content-inner {
+      max-width: 28rem;
+      margin: 0 auto;
+      .index-nav-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        &:nth-child(n+2) {
+          margin-top: 22px;
+          @include mq(lg) {
+            margin-top: 4rem;
+          }
+        }
+        .index-nav {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .index-text {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            color: cl(grey);
+          }
+          .index-border {
+            display: block;
+            position: relative;
+            width: 1px;
+            height: 16rem;
+            margin-top: 7px;
+            background-color: cl(grey);
+            &.sns-border {
+              height: 5rem;
+            }
+            &.pickup-border {
+              height: 24rem;
+            }
+            &::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: -3px;
+              width: 8px;
+              height: 1px;
+              background-color: cl(grey);
+            }
+            &::after {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: -3px;
+              width: 8px;
+              height: 1px;
+              background-color: cl(grey);
+            }
+          }
+        }
+        .index-list {
+          width: 87%;
+          @include mq(lg) {
+            width: 82%;
+          }
+        }
+        .index-nav-list {
+          display: flex;
+          flex-wrap: wrap;
+          .index-nav-item {
+            width: 50%;
+            .index-nav-link {
+              display: inline-block;
+              padding: 13px 0;
+              font-size: 16px;
+              letter-spacing: .15em;
+              text-indent: .15em;
+            }
+            &:nth-child(n+2) {
+              &:hover {
+                .index-nav-link {
+                  color: cl(red);
+                  transition: .3s;
+                }
+              }
+            }
+          }
+        }
+        .index-sns-list {
+          display: flex;
+          .index-sns-item {
+            width: 50%;
+            .index-sns-link {
+              display: flex;
+              align-items: center;
+              padding: 12px 0;
+              transition: .3s;
+              &:hover {
+                .fab,
+                span {
+                  color: cl(red);
+                  transition: .3s;
+                }
+              }
+              .fab {
+                font-size: 30px;
+              }
+              span {
+                padding-left: 8px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .index-blog-list {
+          .index-blog-item {
+            margin-bottom: 4rem;
+            .index-blog-inner {
+              display: block;
+              &:hover {
+                opacity: .7;
+                transition: .3s;
+              }
+              .index-blog-img {
+                width: 97%;
+                @include mq(lg) {
+                  width: 100%;
+                }
+                img {
+                  height: 140px;
+                  object-fit: cover;
+                }
+              }
+              .index-blog-date {
+                margin: 9px 0 -2px 0;
+              }
+              .index-blog-title {
+                font-weight: 700;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+      
+    }
+  }
+  .fv-img {
+    height: 80vw;
+    margin: 0 15px;
+    background-image: url('../images/kv.jpg');
+    background-size: cover;
+    @include mq() {
+      height: 70vh;
+    }
+    @include mq(md) {
+      width: 70%;
+      height: 100vh;
+      margin: 0;
+    }
+  }
+}

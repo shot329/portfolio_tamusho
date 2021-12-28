@@ -1,0 +1,209 @@
+// font
+.abril {
+  font-family: 'Abril Fatface', cursive;
+  font-weight: 400;
+}
+// color
+.red {
+  color: cl(red);
+}
+// inner
+.inner {
+  max-width: 1120px;
+  width: 90%;
+  // padding: 0 20px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @include mq() {
+    width: auto;
+  }
+}
+// centering
+.center {
+  text-align: center;
+}
+// br
+.br-sm {
+  display: none;
+  @include mq() {
+    display: block;
+  }
+}
+// section
+section {
+  margin: 5rem 0;
+  @include mq() {
+    margin: vw(1200, 120) 0;
+  }
+  @include mq(lg) {
+    margin: 12rem 0;
+  }
+}
+h1.site-title {
+  font-size: 24px;
+  @include mq() {
+    margin-top: -2px;
+  }
+  @include mq(md) {
+    margin: 3rem 0;
+    font-size: 32px;
+  }
+  @include mq(lg) {
+    margin: 4rem 0;
+  }
+  .site-title-link {
+    display: inline-block;
+  }
+  span {
+    display: block;
+  }
+  .name {
+    letter-spacing: .2em;
+    text-indent: .2em;
+  }
+  .position {
+    margin-top: -1rem;
+    font-size: .5em;
+    letter-spacing: .15em;
+    text-indent: .15em;
+  }
+}
+h2.section-title {
+  margin-bottom: 24px;
+  @include mq() {
+    margin-bottom: vw(1200, 60);
+  }
+  @include mq(lg) {
+    margin-bottom: 6rem;
+  }
+  .en,
+  .jp {
+    display: block;
+    letter-spacing: 0.25em;
+    text-indent: 0.25em;
+  }
+  .en {
+    font-size: 42px;
+    @include mq() {
+      font-size: vw(1200, 100);
+    }
+    @include mq(lg) {
+      font-size: 10rem;
+    }
+  }
+  .jp {
+    display: block;
+    margin-top: -14px;
+    font-weight: 500;
+    font-size: 11px;
+    @include mq() {
+      margin-top: - vw(1200, 35);
+      font-size: vw(1200, 14);
+    }
+    @include mq(lg) {
+      margin-top: -35px;
+      font-size: 14px;
+    }
+  }
+  .about-jp {
+    @include mq() {
+      margin-left: vw(1200, 182);
+    }
+    @include mq(lg) {
+      margin-left: 182px;
+    }
+  }
+  .service-jp {
+    @include mq() {
+      margin-left: vw(1200, 250);
+    }
+    @include mq(lg) {
+      margin-left: 250px;
+    }
+  }
+  &.side-title {
+    margin-bottom: 12px;
+    text-align: center;
+    @include mq() {
+      margin-bottom: vw(1200, 30);
+      text-align: left;
+    }
+    @include mq(lg) {
+      margin-bottom: 3rem;
+    }
+    .en,
+    .jp {
+      text-indent: 0;
+    }
+  }
+}
+h3.cmn-title {
+  font-size: 19px;
+  @include mq() {
+    font-size: vw(1200, 25);
+  }
+  @include mq(lg) {
+    font-size: 25px;
+  }
+  span {
+    display: block;
+  }
+  .main {
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-indent: 0.1em;
+  }
+  .sub {
+    margin-top: -2px;
+    font-weight: 500;
+    font-size: .58em;
+  }
+}
+// cmn-btn
+.cmn-btn {
+  display: block;
+  position: relative;
+  width: 15rem;
+  height: 6rem;
+  margin: 4rem auto 0;
+  background-color: cl(red);
+  line-height: 6rem;
+  text-align: center;
+  transition: .3s;
+  @include mq() {
+    width: vw(1200, 240);
+    height: vw(1200, 80);
+    margin: vw(1200, 70) auto 0;
+    line-height: vw(1200, 80);
+  }
+  @include mq(lg) {
+    width: 24rem;
+    height: 8rem;
+    margin: 7rem auto 0;
+    line-height: 8rem;
+  }
+  &:hover {
+    border-radius: 15px;
+    opacity: .7;
+    transition: .3s;
+  }
+  .btn-text {
+    font-size: 13px;
+    color: #fff;
+    @include mq() {
+      font-size: vw(1200, 16);
+    }
+    @include mq(lg) {
+      font-size: 16px;
+    }
+  }
+  .btn-arrow {
+    position: absolute;
+    bottom: vw(1200, 2);
+    right: vw(1200, 2);
+    @include mq(lg) {
+      bottom: 2px;
+      right: 2px;
+    }
+  }
+}

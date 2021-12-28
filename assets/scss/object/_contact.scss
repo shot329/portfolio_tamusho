@@ -1,0 +1,141 @@
+#contact {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-image: url('../images/bg_contact.jpg');
+  @include mq() {
+    padding-bottom: vw(1200, 80);
+  }
+  @include mq(lg) {
+    padding-bottom: 85px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 38px;
+    background-color: #fff;
+    @include mq() {
+      height: vw(1200, 90);
+    }
+    @include mq(lg) {
+      height: 9rem;
+    }
+  }
+  .form-wrapper {
+    padding: 3rem 0;
+    background-color: #fff;
+    @include mq() {
+      padding: vw(1200, 50) 0;
+    }
+    @include mq(lg) {
+      padding: 5rem 0;
+    }
+    .form-inner {
+      padding: 0 15px;
+      margin: 0 auto;
+      @include mq() {
+        max-width: vw(1200, 900);
+        padding: 0;
+      }
+      @include mq(lg) {
+        max-width: 90rem;
+      }
+      .form-lead {
+        margin-bottom: 1rem;
+        font-size: 13px;
+        text-align: left;
+        @include mq() {
+          margin-bottom: vw(1200, 40);
+          font-size: vw(1200, 16);
+          text-align: center;
+        }
+        @include mq(lg) {
+          margin-bottom: 4rem;
+          font-size: 16px;
+        }
+      }
+      .form-table {
+        width: 100%;
+        tr {
+          td {
+            font-weight: 500;
+            display: block;
+            width: 100%;
+            font-size: 13px;
+            @include mq() {
+              display: table-cell;
+              width: auto;
+              font-size: vw(1200, 16);
+            }
+            @include mq(lg) {
+              font-size: 16px;
+            }
+            &:first-child {
+              padding: 25px 0 9px;
+              @include mq() {
+                padding: 0 vw(1200, 20) vw(1200, 27) 0;
+              }
+              @include mq(lg) {
+                padding: 0 2rem 27px 0;
+              }
+            }
+            .must {
+              padding-left: 8px;
+              color: #ED2E2E;
+              font-size: 10px;
+              @include mq() {
+                padding-left: vw(1200, 5);
+                font-size: vw(1200, 12);
+              }
+              @include mq(lg) {
+                padding-left: 5px;
+                font-size: 12px;
+              }
+            }
+          }
+          &:nth-child(n+2) {
+            td {
+              @include mq() {
+                padding-top: vw(1200, 35);
+              }
+              @include mq(lg) {
+                padding-top: 35px;
+              }
+            }
+          }
+          &:last-child {
+            td:first-child {
+              @include mq() {
+                padding-top: vw(1200, 40);
+                vertical-align: top;
+              }
+              @include mq(lg) {
+                padding-top: 4rem;
+              }
+            }
+          }
+        }
+        input,textarea {
+          width: 100%;
+          padding: 1rem;
+          border: 1px solid cl(grey02);
+          box-sizing: border-box;
+          font-size: 100%;
+          @include mq() {
+            width: vw(1200, 680);
+            padding: vw(1200, 13) vw(1200, 10);
+          }
+          @include mq(lg) {
+            width: 70rem;
+            padding: 13px 1rem;
+          }
+        }
+      }
+    }
+  }
+}

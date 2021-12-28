@@ -1,0 +1,103 @@
+#blog {
+  .blog-list {
+    @include mq() {
+      display: flex;
+    }
+    .blog-item {
+      border-left: 1px solid cl(grey02);
+      @include mq() {
+        width: calc(100%/3);
+      }
+      &:not(:last-child) {
+        border-right: 1px solid cl(grey02);
+        margin-bottom: 3rem;
+        @include mq() {
+          border-right: none;
+          margin-bottom: 0;
+        }
+      }
+      &:last-child {
+        border-right: 1px solid cl(grey02);
+      }
+      .blog-inner {
+        display: block;
+        padding: 0 15px;
+        transition: .3s;
+        @include mq() {
+          padding: 0 vw(1200, 30);
+        }
+        @include mq(lg) {
+          padding: 0 3rem;
+        }
+        &:hover {
+          opacity: .7;
+          transition: .3s;
+          .blog-title {
+            text-decoration: underline;
+          }
+        }
+      }
+      .blog-category {
+        font-size: 10px;
+        margin-bottom: 5px;
+        @include mq() {
+          font-size: vw(1200, 12);
+          margin-bottom: vw(1200, 8);
+        }
+        @include mq(lg) {
+          font-size: 12px;
+          margin-bottom: 8px;
+        }
+      }
+      .blog-img {
+        img {
+          margin-left: -1px;
+          object-fit: cover;
+          @include mq() {
+            height: vw(1200, 180);
+          }
+          @include mq(lg) {
+            height: 180px;
+          }
+        }
+      }
+      .blog-title {
+        margin: 14px 0 1rem;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.5;
+        @include mq() {
+          margin: vw(1200, 14) 0 vw(1200, 10);
+          font-size: vw(1200, 18);
+        }
+        @include mq(lg) {
+          margin: 14px 0 1rem;
+          font-size: 18px;
+        }
+      }
+      .blog-detail {
+        font-size: 11px;
+        @include mq() {
+          font-size: vw(1200, 12);
+        }
+        @include mq(lg) {
+          font-size: 12px;
+        }
+      }
+      .blog-date {
+        margin-top: 1rem;
+        color: cl(grey);
+        font-size: 10px;
+        text-align: right;
+        @include mq() {
+          margin-top: vw(1200, 10);
+          font-size: vw(1200, 11);
+        }
+        @include mq(lg) {
+          margin-top: 1rem;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+}
